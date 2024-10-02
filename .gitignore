@@ -51,3 +51,8 @@ local
 
 # Sentry Config File
 .sentryclirc
+
+# idea
+.DS_Store
+.idea/
+
