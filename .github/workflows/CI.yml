@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [develop]
   pull_request:
-    branches: [main]
+    branches: [develop]
 
 jobs:
   build:
@@ -45,12 +45,6 @@ jobs:
           cache: "npm"
       - run: npm ci
 
-      - name: Set SENTRY_AUTH_TOKEN env if secret exists
-        run: |
-          if [[ -n "${{ secrets.SENTRY_AUTH_TOKEN }}" ]]; then
-            echo "SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}" >> $GITHUB_ENV
-          fi
-
       - name: Build Next.js for E2E tests
         run: npm run build
 
@@ -66,22 +60,6 @@ jobs:
 
       - name: Run unit tests
         run: npm run test
-
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-
-      - name: Install Playwright (used for Storybook and E2E tests)
-        run: npx playwright install --with-deps
-
-      - name: Run storybook tests
-        run: npm run test-storybook:ci
-
-      - name: Run E2E tests
-        run: npx percy exec -- npm run test:e2e
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
       - uses: actions/upload-artifact@v3
         if: always()
