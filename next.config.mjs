@@ -1,16 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies, import/extensions */
 import './src/libs/Env.mjs';
 import withBundleAnalyzer from '@next/bundle-analyzer';
-import withNextIntl from 'next-intl/plugin';
-
-const withNextIntlConfig = withNextIntl('./src/libs/i18n.ts');
 
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
 /** @type {import('next').NextConfig} */
-export default bundleAnalyzer( withNextIntlConfig({
+export default bundleAnalyzer({
   eslint: {
     dirs: ['.'],
   },
@@ -18,7 +15,7 @@ export default bundleAnalyzer( withNextIntlConfig({
   reactStrictMode: true,
   experimental: {
     // Related to Pino error with RSC: https://github.com/orgs/vercel/discussions/3150
-    serverComponentsExternalPackages: ['pino'],
+    serverExternalPackages: ['pino'],
   },
   webpack: (config) => {
     // config.externals is needed to resolve the following errors:
@@ -30,5 +27,4 @@ export default bundleAnalyzer( withNextIntlConfig({
     });
     return config;
   },
-}))
-
+});

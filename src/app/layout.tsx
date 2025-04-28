@@ -1,12 +1,11 @@
 import '@/styles/global.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import { NextIntlClientProvider, useMessages } from 'next-intl';
-
-import { AppConfig } from '@/utils/AppConfig';
 
 export const metadata: Metadata = {
+  title: 'Dating application',
+  description: 'Dating application',
   icons: [
     {
       rel: 'apple-touch-icon',
@@ -31,26 +30,12 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout(props: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
-  // Validate that the incoming `locale` parameter is valid
-  if (!AppConfig.locales.includes(props.params.locale)) notFound();
-
-  // Using internationalization in Client Components
-  const messages = useMessages();
-
+export default function RootLayout(
+  props: Readonly<{ children: React.ReactNode }>,
+) {
   return (
-    <html lang={props.params.locale}>
-      <body>
-        <NextIntlClientProvider
-          locale={props.params.locale}
-          messages={messages}
-        >
-          {props.children}
-        </NextIntlClientProvider>
-      </body>
+    <html lang="vi" data-theme="light">
+      <body>{props.children}</body>
     </html>
   );
 }
