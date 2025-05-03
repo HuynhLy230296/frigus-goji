@@ -1,110 +1,4 @@
-# Boilerplate and Starter for Next.js 14+, Tailwind CSS 3.4, and TypeScript.
-
-<p align="center">
-  <a href="https://creativedesignsguru.com/demo/Nextjs-Boilerplate/"><img height="300" src="public/assets/images/nextjs-starter-banner.png?raw=true" alt="Next js starter banner"></a>
-</p>
-
-🚀 Boilerplate and Starter for Next.js with App Router support, Tailwind CSS, and TypeScript ⚡️ Prioritizing developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Jest, Testing Library, Commitlint, VSCode, PostCSS, Tailwind CSS, Authentication with [Clerk](https://clerk.com?utm_source=github&utm_medium=sponsorship&utm_campaign=nextjs-boilerplate), Database with DrizzleORM (SQLite, PostgreSQL, and MySQL) and [Turso](https://turso.tech/?utm_source=nextjsstarterbp), Error Monitoring with [Sentry](https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo), Logging with Pino.js and Log Management with [Better Stack](https://betterstack.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate), Monitoring as Code with [Checkly](https://www.checklyhq.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate), Storybook, Multi-language (i18n), and more.
-
-Clone this project and use it to create your own [Next.js](https://nextjs.org) project. You can check a [Next js templates demo](https://creativedesignsguru.com/demo/Nextjs-Boilerplate/).
-
-## Sponsors
-
-<table width="100%">
-  <tr height="187px">
-    <td align="center" width="33%">
-      <a href="https://clerk.com?utm_source=github&utm_medium=sponsorship&utm_campaign=nextjs-boilerplate">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github.com/ixartz/Next-js-Boilerplate/assets/1328388/a3cd2a25-377b-4c0d-a3d3-bce121df2c94">
-          <source media="(prefers-color-scheme: light)" srcset="https://github.com/ixartz/Next-js-Boilerplate/assets/1328388/3459074d-c3e2-46c5-8be4-b836cb7989ea">
-          <img alt="Clerk – Authentication & User Management for Next.js" src="https://github.com/ixartz/Next-js-Boilerplate/assets/1328388/3459074d-c3e2-46c5-8be4-b836cb7989ea">
-        </picture>
-      </a>
-    </td>
-    <td align="center" width="33%">
-      <a href="https://turso.tech/?utm_source=nextjsstarterbp">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/turso-light.png?raw=true">
-          <source media="(prefers-color-scheme: light)" srcset="public/assets/images/turso-dark.png?raw=true">
-          <img alt="Turso - SQLite for Production" src="public/assets/images/turso-dark.png?raw=true">
-        </picture>
-      </a>
-    </td>
-    <td align="center" width="33%">
-      <a href="https://l.crowdin.com/next-js">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/crowdin-white.png?raw=true">
-          <source media="(prefers-color-scheme: light)" srcset="public/assets/images/crowdin-dark.png?raw=true">
-          <img alt="Crowdin" src="public/assets/images/crowdin-dark.png?raw=true">
-        </picture>
-      </a>
-    </td>
-  </tr>
-  <tr height="187px">
-    <td align="center" width="33%">
-      <a href="https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/sentry-white.png?raw=true">
-          <source media="(prefers-color-scheme: light)" srcset="public/assets/images/sentry-dark.png?raw=true">
-          <img alt="Sentry" src="public/assets/images/sentry-dark.png?raw=true">
-        </picture>
-      </a>
-      <a href="https://about.codecov.io/codecov-free-trial/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/codecov-white.svg?raw=true">
-          <source media="(prefers-color-scheme: light)" srcset="public/assets/images/codecov-dark.svg?raw=true">
-          <img alt="Codecov" src="public/assets/images/codecov-dark.svg?raw=true">
-        </picture>
-      </a>
-    </td>
-    <td align="center" width="33%">
-      <a href="https://posthog.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://posthog.com/brand/posthog-logo-white.svg">
-          <source media="(prefers-color-scheme: light)" srcset="https://posthog.com/brand/posthog-logo.svg">
-          <img alt="PostHog" src="https://posthog.com/brand/posthog-logo.svg">
-        </picture>
-      </a>
-    </td>
-    <td align="center" width="33%">
-      <a href="https://betterstack.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/better-stack-white.png?raw=true">
-          <source media="(prefers-color-scheme: light)" srcset="public/assets/images/better-stack-dark.png?raw=true">
-          <img alt="Better Stack" src="public/assets/images/better-stack-dark.png?raw=true">
-        </picture>
-      </a>
-    </td>
-  </tr>
-  <tr height="187px">
-    <td align="center" width="33%">
-      <a href="https://upstash.com/?utm_source=nextjs-boilerplate">
-        <img src="https://raw.githubusercontent.com/upstash/sponsorship/master/redis.png" alt="Upstash">
-      </a>
-    </td>
-    <td align="center" width="33%">
-      <a href="https://www.checklyhq.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/checkly-logo-dark.png?raw=true">
-          <source media="(prefers-color-scheme: light)" srcset="public/assets/images/checkly-logo-light.png?raw=true">
-          <img alt="Checkly" src="public/assets/images/checkly-logo-light.png?raw=true">
-        </picture>
-      </a>
-    </td>
-    <td align="center" style=width="33%">
-      <a href="https://nextlessjs.com">
-        <img src="public/assets/images/nextlessjs.png?raw=true" alt="React SaaS Boilerplate Next.js" />
-      </a>
-    </td>
-  </tr>
-  <tr height="187px">
-    <td align="center" width="33%">
-      <a href="mailto:contact@creativedesignsguru.com">
-        Add your logo here
-      </a>
-    </td>
-  </tr>
-</table>
+# Dating Website with Next.js 14+, Tailwind CSS 3.4, and TypeScript.
 
 ### Features
 
@@ -131,8 +25,6 @@ Developer experience first, extremely flexible code structure and only keep what
 - 🧪 Integration and E2E Testing with Playwright
 - 👷 Run tests on pull request with GitHub Actions
 - 🎉 Storybook for UI development
-- 🚨 Error Monitoring with [Sentry](https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo)
-- ☂️ Code coverage with [Codecov](https://about.codecov.io/codecov-free-trial/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo)
 - 📝 Logging with Pino.js and Log Management with [Better Stack](https://betterstack.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate)
 - 🖥️ Monitoring as Code with [Checkly](https://www.checklyhq.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate)
 - 🎁 Automatic changelog generation with Semantic Release
@@ -169,8 +61,8 @@ Built-in feature from Next.js:
 Run the following command on your local environment:
 
 ```shell
-git clone --depth=1 https://github.com/ixartz/Next-js-Boilerplate.git my-project-name
-cd my-project-name
+git clone --depth=1 https://github.com/HuynhLy230296/frigus-dating.git
+cd frigus-dating
 npm install
 ```
 
@@ -349,18 +241,6 @@ You also need to defined the environment variables `CLERK_SECRET_KEY` using your
 
 The command starts a local server with the production build. Then, you can now open http://localhost:3000 with your favorite browser to see the project.
 
-### Error Monitoring
-
-The project uses [Sentry](https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo) to monitor errors. For development environment, you don't need to do anything: Next.js Boilerplate is already configured to use Sentry and Spotlight (Sentry for Development). All errors will be automatically sent to your local Spotlight instance. So, you can try the Sentry experience locally.
-
-For production environment, you need to create a Sentry account and create a new project. Then, in `next.config.mjs`, you need to update the `org` and `project` attribute in `withSentryConfig` function. You also need to add your Sentry DSN in `sentry.client.config.ts`, `sentry.edge.config.ts` and `sentry.server.config.ts`.
-
-### Code coverage
-
-Next.js Boilerplate relies on [Codecov](https://about.codecov.io/codecov-free-trial/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo) for code coverage reporting solution. To use Codecov, create a Codecov account and connect it to your GitHub account. On your Codecov dashboard, it should display a list of your repositories. Select the repository you want to enable Codecov for and copy the token. Then, in your GitHub Actions, you need to define the `CODECOV_TOKEN` environment variable and paste the token you copied.
-
-Be sure to create the `CODECOV_TOKEN` as a Github Actions secret, do not paste it directly into your source code.
-
 ### Logging
 
 The project uses Pino.js for logging. By default, for development environment, the logs are displayed in the console.
@@ -368,14 +248,6 @@ The project uses Pino.js for logging. By default, for development environment, t
 For production environment, the project is already integrated with [Better Stack](https://betterstack.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate) to manage and query your logs using SQL. To use Better Stack, you need to create a [Better Stack](https://betterstack.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate) account and create a new source: go to your Better Stack Logs Dashboard > Sources > Connect source. Then, you need to give a name to your source and select Node.js as the platform.
 
 After creating the source, you able to see your source token and copy it. Then, in your environment variabless, you can paste the token in `LOGTAIL_SOURCE_TOKEN` variable. Now, all your logs will be automatically sent and ingested by Better Stack.
-
-### Checkly monitoring
-
-The project uses [Checkly](https://www.checklyhq.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate) to ensure that your production environment is always up and running. At regular intervals, Checkly runs the tests ending with `*.check.spec.ts` extension and notifies you if any of the tests fail. Additionally, you have the flexibility to execute tests across multiple locations to ensure that your application is available worldwide.
-
-To use Checkly, you must first create an account on [their website](https://www.checklyhq.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate). Once you have an account, you can set the `CHECKLY_API_KEY` environment variable in GitHub Actions by generating a new API key in the Checkly Dashboard. Additionally, you will need to define the `CHECKLY_ACCOUNT_ID`, which can also be found in your Checkly Dashboard under User Settings > General.
-
-To complete the setup, make sure to update the `checkly.config.ts` file with your own email address and production URL.
 
 ### Useful commands
 
@@ -422,109 +294,3 @@ Everyone is welcome to contribute to this project. Feel free to open an issue if
 ### License
 
 Licensed under the MIT License, Copyright © 2024
-
-See [LICENSE](LICENSE) for more information.
-
-## Sponsors
-
-<table width="100%">
-  <tr height="187px">
-    <td align="center" width="33%">
-      <a href="https://clerk.com?utm_source=github&utm_medium=sponsorship&utm_campaign=nextjs-boilerplate">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github.com/ixartz/Next-js-Boilerplate/assets/1328388/a3cd2a25-377b-4c0d-a3d3-bce121df2c94">
-          <source media="(prefers-color-scheme: light)" srcset="https://github.com/ixartz/Next-js-Boilerplate/assets/1328388/3459074d-c3e2-46c5-8be4-b836cb7989ea">
-          <img alt="Clerk – Authentication & User Management for Next.js" src="https://github.com/ixartz/Next-js-Boilerplate/assets/1328388/3459074d-c3e2-46c5-8be4-b836cb7989ea">
-        </picture>
-      </a>
-    </td>
-    <td align="center" width="33%">
-      <a href="https://turso.tech/?utm_source=nextjsstarterbp">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/turso-light.png?raw=true">
-          <source media="(prefers-color-scheme: light)" srcset="public/assets/images/turso-dark.png?raw=true">
-          <img alt="Turso - SQLite for Production" src="public/assets/images/turso-dark.png?raw=true">
-        </picture>
-      </a>
-    </td>
-    <td align="center" width="33%">
-      <a href="https://l.crowdin.com/next-js">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/crowdin-white.png?raw=true">
-          <source media="(prefers-color-scheme: light)" srcset="public/assets/images/crowdin-dark.png?raw=true">
-          <img alt="Crowdin" src="public/assets/images/crowdin-dark.png?raw=true">
-        </picture>
-      </a>
-    </td>
-  </tr>
-  <tr height="187px">
-    <td align="center" width="33%">
-      <a href="https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/sentry-white.png?raw=true">
-          <source media="(prefers-color-scheme: light)" srcset="public/assets/images/sentry-dark.png?raw=true">
-          <img alt="Sentry" src="public/assets/images/sentry-dark.png?raw=true">
-        </picture>
-      </a>
-      <a href="https://about.codecov.io/codecov-free-trial/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/codecov-white.svg?raw=true">
-          <source media="(prefers-color-scheme: light)" srcset="public/assets/images/codecov-dark.svg?raw=true">
-          <img alt="Codecov" src="public/assets/images/codecov-dark.svg?raw=true">
-        </picture>
-      </a>
-    </td>
-    <td align="center" width="33%">
-      <a href="https://posthog.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://posthog.com/brand/posthog-logo-white.svg">
-          <source media="(prefers-color-scheme: light)" srcset="https://posthog.com/brand/posthog-logo.svg">
-          <img alt="PostHog" src="https://posthog.com/brand/posthog-logo.svg">
-        </picture>
-      </a>
-    </td>
-    <td align="center" width="33%">
-      <a href="https://betterstack.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/better-stack-white.png?raw=true">
-          <source media="(prefers-color-scheme: light)" srcset="public/assets/images/better-stack-dark.png?raw=true">
-          <img alt="Better Stack" src="public/assets/images/better-stack-dark.png?raw=true">
-        </picture>
-      </a>
-    </td>
-  </tr>
-  <tr height="187px">
-    <td align="center" width="33%">
-      <a href="https://upstash.com/?utm_source=nextjs-boilerplate">
-        <img src="https://raw.githubusercontent.com/upstash/sponsorship/master/redis.png" alt="Upstash">
-      </a>
-    </td>
-    <td align="center" width="33%">
-      <a href="https://www.checklyhq.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/checkly-logo-dark.png?raw=true">
-          <source media="(prefers-color-scheme: light)" srcset="public/assets/images/checkly-logo-light.png?raw=true">
-          <img alt="Checkly" src="public/assets/images/checkly-logo-light.png?raw=true">
-        </picture>
-      </a>
-    </td>
-    <td align="center" style=width="33%">
-      <a href="https://nextlessjs.com">
-        <img src="public/assets/images/nextlessjs.png?raw=true" alt="React SaaS Boilerplate Next.js" />
-      </a>
-    </td>
-  </tr>
-  <tr height="187px">
-    <td align="center" width="33%">
-      <a href="mailto:contact@creativedesignsguru.com">
-        Add your logo here
-      </a>
-    </td>
-  </tr>
-</table>
-
----
-
-Made with ♥ by [CreativeDesignsGuru](https://creativedesignsguru.com) [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
-
-[![Sponsor Next JS Boilerplate](https://cdn.buymeacoffee.com/buttons/default-red.png)](https://github.com/sponsors/ixartz)
