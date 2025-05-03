@@ -24,8 +24,8 @@ export default function Sidebar() {
                   <Image
                     alt="profile"
                     src={user.imageUrl}
-                    width="12"
-                    height="12"
+                    fill
+                    style={{ objectFit: 'cover', borderRadius: '50%' }}
                   />
                 )}
               </div>
