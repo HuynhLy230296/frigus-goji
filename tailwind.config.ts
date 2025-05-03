@@ -8,4 +8,11 @@ export default {
   daisyui: {
     themes: ['light', 'dark'],
   },
+  theme: {
+    extend: {
+      fontSize: {
+        md: '16px',
+      },
+    },
+  },
 } satisfies Config;

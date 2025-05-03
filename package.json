@@ -120,6 +120,11 @@
       "path": "@commitlint/cz-commitlint"
     }
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint"
+    ]
+  },
   "release": {
     "branches": [
       "main"

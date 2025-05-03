@@ -17,6 +17,9 @@ export default bundleAnalyzer({
     // Related to Pino error with RSC: https://github.com/orgs/vercel/discussions/3150
     serverExternalPackages: ['pino'],
   },
+  images: {
+    remotePatterns: [new URL('https://img.clerk.com/**')],
+  },
   webpack: (config) => {
     // config.externals is needed to resolve the following errors:
     // Module not found: Can't resolve 'bufferutil'

@@ -1,9 +1,3 @@
-import { MasterTemplate } from '@/templates/MasterTemplate';
-
-const NewFeeds = () => (
-  <MasterTemplate>
-    <div>New Feeds</div>
-  </MasterTemplate>
-);
+const NewFeeds = () => <div>New Feeds</div>;
 
 export default NewFeeds;

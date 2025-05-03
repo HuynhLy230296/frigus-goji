@@ -1,6 +1,8 @@
 import '@/styles/global.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+import { enUS } from '@clerk/localizations';
+import { ClerkProvider } from '@clerk/nextjs';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -33,9 +35,20 @@ export const metadata: Metadata = {
 export default function RootLayout(
   props: Readonly<{ children: React.ReactNode }>,
 ) {
+  const clerkLocale = enUS;
+  const signInUrl = '/sign-in';
+  const signUpUrl = '/sign-up';
   return (
     <html lang="vi" data-theme="light">
-      <body>{props.children}</body>
+      <body>
+        <ClerkProvider
+          localization={clerkLocale}
+          signInUrl={signInUrl}
+          signUpUrl={signUpUrl}
+        >
+          {props.children}
+        </ClerkProvider>
+      </body>
     </html>
   );
 }
