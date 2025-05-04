@@ -47,6 +47,11 @@ jobs:
           echo "${{ secrets.VPS_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
-      - name: Debug SSH with verbose logging
+      - name: Deploy and run Docker container
         run: |
-          ssh -v -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "echo ✅ SSH worked"
+          ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
+            docker stop goji || true
+            docker rm goji || true
+            docker pull ${{ secrets.DOCKER_USERNAME }}/goji:latest
+            docker run -d --name goji -p 3000:3000 ${{ secrets.DOCKER_USERNAME }}/goji:latest
+          EOF
