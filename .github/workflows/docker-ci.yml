@@ -9,7 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -41,10 +40,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    if: github.ref == 'refs/heads/main'
-
     steps:
-
       - name: Deploy to production
         run: |
           echo "Deploying Docker container to VPS..."
