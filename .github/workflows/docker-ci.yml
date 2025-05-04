@@ -2,9 +2,9 @@ name: Docker CI/CD Pipeline
 
 on:
   pull_request:
-    branches: [ feature/CI/CD-setup ]
+    branches: [ feature/CICD-setup ]
   push:
-    branches: [ feature/CI/CD-setup ]
+    branches: [ feature/CICD-setup ]
 
 jobs:
   build:
