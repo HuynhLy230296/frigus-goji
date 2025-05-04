@@ -50,8 +50,27 @@ jobs:
       - name: Deploy and run Docker container
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
+            echo "🛑 Stopping existing container (if any)..."
             docker stop goji || true
+          
+            echo "🧹 Removing old container (if any)..."
             docker rm goji || true
+          
+            echo "🚀 Starting pull container..."
             docker pull ${{ secrets.DOCKER_USERNAME }}/goji:latest
+          
+            echo "🚀 Starting new container..."
             docker run -d --name goji -p 3000:3000 ${{ secrets.DOCKER_USERNAME }}/goji:latest
+          
+            echo "📡 Checking container status..."
+            docker ps --filter "name=goji"
+          
+            echo "🔍 Validating Nginx config..."
+            sudo nginx -t
+          
+            echo "🔄 Restarting Nginx..."
+            sudo systemctl restart nginx
+          
+            echo "✅ Nginx status:"
+            sudo systemctl status nginx --no-pager
           EOF
