@@ -11,7 +11,7 @@ const MasterTemplate = (props: { children: React.ReactNode }) => {
           <Header />
         </header>
         <div className="mx-auto flex pt-[var(--header-height)]">
-          <aside className="fixed left-0 top-[var(--header-height)] h-screen w-1/5 bg-base-200 p-2">
+          <aside className="fixed left-0 top-[var(--header-height)] h-screen w-1/4 bg-base-200 p-2">
             {/* Left Sidebar */}
             <Sidebar />
           </aside>
@@ -19,9 +19,8 @@ const MasterTemplate = (props: { children: React.ReactNode }) => {
             {/* Main Content */}
             {props.children}
           </main>
-          <aside className="fixed right-0 top-[var(--header-height)] h-screen w-1/5 bg-base-200 p-4">
+          <aside className="fixed right-0 top-[var(--header-height)] h-screen w-1/4 bg-base-200 p-4">
             {/* Right Sidebar */}
-            <div>Right Sidebar</div>
           </aside>
         </div>
       </div>
