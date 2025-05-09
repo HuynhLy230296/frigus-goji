@@ -2,22 +2,56 @@
 
 import { useUser } from '@clerk/nextjs';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
-export default function Sidebar() {
+export default function Category() {
   const { user } = useUser();
+  const router = useRouter();
   const menuItems = [
-    { id: 2, name: 'Wish List', icon: 'fas fa-star', color: '#1877F2' },
-    { id: 3, name: 'Favorite Places', icon: 'fas fa-heart', color: '#1877F2' },
-    { id: 4, name: 'My Tours', icon: 'fas fa-map', color: '#1877F2' },
-    { id: 5, name: 'Saved', icon: 'fas fa-bookmark', color: '#1877F2' },
+    {
+      id: 2,
+      name: 'Wish List',
+      icon: 'fas fa-star',
+      color: '#1877F2',
+      url: '/wish-list',
+    },
+    {
+      id: 3,
+      name: 'Favorite Places',
+      icon: 'fas fa-heart',
+      color: '#1877F2',
+      url: '/favorite-places',
+    },
+    {
+      id: 4,
+      name: 'My Tours',
+      icon: 'fas fa-map',
+      color: '#1877F2',
+      url: '/my-tours',
+    },
+    {
+      id: 5,
+      name: 'Saved',
+      icon: 'fas fa-bookmark',
+      color: '#1877F2',
+      url: '/saved',
+    },
   ];
+
+  const redirectToURL = (url: string) => () => {
+    router.push(url);
+  };
 
   return (
     <div className="bg-base-200 p-2">
       <ul className="menu w-full">
         <li className="mb-2">
-          <div className="flex items-center space-x-4 font-medium">
+          {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
+          <div
+            className="flex items-center space-x-4 font-medium"
+            onClick={redirectToURL('profile')}
+          >
             <div className="avatar">
               <div className="w-8 rounded-full">
                 {user?.imageUrl && (
@@ -35,7 +69,10 @@ export default function Sidebar() {
         </li>
         {menuItems.map((item) => (
           <li key={item.id} className="mb-2">
-            <div className="flex items-center font-medium">
+            <div
+              className="flex items-center font-medium"
+              onClick={redirectToURL(item.url)}
+            >
               <i
                 className={`${item.icon} mr-3`}
                 style={{
