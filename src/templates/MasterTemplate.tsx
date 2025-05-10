@@ -9,9 +9,7 @@ const MasterTemplate = (props: { children: React.ReactNode }) => {
         <header className="fixed left-0 top-0 z-50 w-full bg-white shadow-md">
           <Header />
         </header>
-        <div className="mx-auto flex pt-[var(--header-height)]">
-          {props.children}
-        </div>
+        <div className="mx-auto flex bg-base-200">{props.children}</div>
       </div>
     </div>
   );
