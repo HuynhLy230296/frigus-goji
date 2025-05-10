@@ -18,7 +18,10 @@ export default bundleAnalyzer({
     serverExternalPackages: ['pino'],
   },
   images: {
-    remotePatterns: [new URL('https://img.clerk.com/**')],
+    remotePatterns: [
+      new URL('https://img.clerk.com/**'),
+      new URL('https://via.placeholder.com/**'),
+    ],
   },
   webpack: (config) => {
     // config.externals is needed to resolve the following errors:

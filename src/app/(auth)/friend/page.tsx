@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import React from 'react';
 
 type Friend = {
@@ -36,10 +35,12 @@ export default function FriendComponent() {
           <li key={friend.id} className="flex items-center space-x-4">
             <div className="avatar">
               <div className="w-12 rounded-full">
-                <Image
-                  src={friend.profilePicture}
-                  alt={`${friend.name}'s profile`}
-                />
+                {/* <Image */}
+                {/*  src={friend.profilePicture} */}
+                {/*  alt={`${friend.name}'s profile`} */}
+                {/*  fill */}
+                {/*  style={{ objectFit: 'cover', borderRadius: '50%' }} */}
+                {/* /> */}
               </div>
             </div>
             <span className="text-lg font-medium">{friend.name}</span>

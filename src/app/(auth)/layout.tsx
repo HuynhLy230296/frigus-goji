@@ -1,7 +1,9 @@
+import React from 'react';
+
 import { MasterTemplate } from '@/templates/MasterTemplate';
 
-export default function AuthLayout(
-  props: Readonly<{ children: React.ReactNode }>,
-) {
+const AuthLayout = (props: { children: React.ReactNode }) => {
   return <MasterTemplate>{props.children}</MasterTemplate>;
-}
+};
+
+export default AuthLayout;
