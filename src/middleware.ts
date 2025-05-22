@@ -9,7 +9,8 @@ export default clerkMiddleware(async (auth, req) => {
   if (
     !userId &&
     !currentPath.includes('/sign-in') &&
-    !currentPath.includes('/sign-up')
+    !currentPath.includes('/sign-up') &&
+    !currentPath.includes('/api')
   ) {
     // Add custom logic to run before redirecting
     return redirectToSignIn();
