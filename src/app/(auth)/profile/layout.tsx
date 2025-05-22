@@ -77,7 +77,7 @@ const ProfileLayout = ({ children }: { children: React.ReactNode }) => {
                   <li key={tab.name} className="cursor-pointer">
                     <a
                       href={tab.href}
-                      className={`border-b-2 border-transparent pb-3 hover:border-blue-500 hover:text-blue-500 ${window.location.pathname === tab.href ? 'border-blue-500 font-bold text-blue-500' : ''}`}
+                      className="border-b-2 border-transparent pb-3 hover:border-blue-500 hover:text-blue-500"
                     >
                       {tab.name}
                     </a>
